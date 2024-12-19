@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: borderbox;
+    font-family: sans-serif;
   }
   
   html,
@@ -13,4 +14,72 @@
     height: 100%;
     width: 100%;
      
+  }
+  #controls {
+    
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    border-bottom: 1px solid rgb(145, 145, 145);
+    padding: 8px;
+    background: linear-gradient(to right, black 0%, rgb(80, 80, 80) 50%, black 100%)
+    
+    
+  }
+
+  #soldier-name{
+    padding: 12px;
+    
+    border:0.5px solid gray;
+    border-radius: 3px;
+    width: 30vw;
+  }
+
+  #submit-name{
+    background-color: rgb(4, 255, 4);
+    border:none;
+    outline:none;
+    padding: 8px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    box-shadow: 2px 2px 2px gray;
+
+  }
+
+  #submit-name:hover{
+    cursor:pointer;
+    scale: 1.1;
+    transition: all ease-in-out 0.3s;
+    
+  }
+
+  .Devices{
+    font-family: sans-serif;
+    font-size:x-large;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: rgb(253, 54, 54);
+    color: white;
+
+    
+  }
+  li{
+    border:0.5px solid gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 1px gray;
+    font-weight: 600;
+    
+  }
+  .panel{
+    margin-top: 4px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px gray;
+    background-color: white;
   }

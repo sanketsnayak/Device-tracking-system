@@ -14,8 +14,21 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
- 
-    <div id="map"></div>
+    
+    <div id="controls">
+      <input type="text" id="soldier-name" placeholder="Enter Soldier Name" />
+      <button id="submit-name">Add Name</button>
+    </div>
+    <div style="display: flex; background: linear-gradient(to right, black 0%, rgb(80, 80, 80) 50%, black 100%)">
+      <!-- Map Section -->
+      <div id="map" style="height: 100vh; width: 75%;"></div>
+    
+      <!-- Device List Panel -->
+      <div class="panel" style="width: 25%; padding: 10px; border: 1px solid #ccc; overflow-y: auto; margin-left: 8px; margin-right: 8px ;">
+        <div class="Devices">Tracked Devices</div>
+        <ul id="device-list" style="list-style-type: none; padding: 0;"></ul>
+      </div>
+    </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"
       integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g=="
