@@ -12,20 +12,25 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    
+
   </head>
   <body>
+  
     
     <div id="controls">
       <input type="text" id="soldier-name" placeholder="Enter Soldier Name" />
-      <button id="submit-name">Add Name</button>
+      <button id="submit-name"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Add Name</button>
     </div>
-    <div style="display: flex; background: linear-gradient(to right, black 0%, rgb(80, 80, 80) 50%, black 100%)">
+  
+    <div style="display: flex;  ">
       <!-- Map Section -->
-      <div id="map" style="height: 100vh; width: 75%;"></div>
-    
+       <div class="map1" style="height:100%; width:75%; padding:10px; border: 1px solid #ccc ">
+      <div id="map" style="height: 90vh; width: 100%;"></div>
+    </div >
       <!-- Device List Panel -->
       <div class="panel" style="width: 25%; padding: 10px; border: 1px solid #ccc; overflow-y: auto; margin-left: 8px; margin-right: 8px ;">
-        <div class="Devices">Tracked Devices</div>
+        <div class="Devices"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pinned"><path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"/><circle cx="12" cy="8" r="2"/><path d="M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712"/></svg>Tracked Devices</div>
         <ul id="device-list" style="list-style-type: none; padding: 0;"></ul>
       </div>
     </div>
