@@ -1,31 +1,31 @@
 const socket = io();
 
-// Elements
+
 const soldierNameInput = document.getElementById("soldier-name");
 const submitButton = document.getElementById("submit-name");
 const deviceList = document.getElementById("device-list"); 
 const geofenceButton = document.createElement("button");
 const sosButton = document.createElement("button");
 
-// Variables to store the soldier's name, markers, and geofence
+
 let soldierName = "";
 const markers = {};
-let geofence = { center: { latitude: 13.00992, longitude: 74.79316 }, radius: 500}; // Example geofence
+let geofence = { center: { latitude: 13.00992, longitude: 74.79316 }, radius: 500}; 
 
-// Add Geofence Button
+
 
 geofenceButton.id = "geofence-button";
 document.getElementById("controls").appendChild(geofenceButton);
 const svgContent=`Update Geofence <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-arrow-right"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="m12 16 4-4-4-4"/></svg>`
 document.getElementById("geofence-button").innerHTML=svgContent
-// Add SOS Button
+
 const emerSvg=`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-siren"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="m4.929 4.929.707.707"/><path d="M12 12v6"/></svg> Emergency`
 sosButton.id = "sos-button";
 document.getElementById("controls").appendChild(sosButton);
 document.getElementById("sos-button").innerHTML=emerSvg
 
 
-// Handle name submission
+
 submitButton.addEventListener("click", () => {
   soldierName = soldierNameInput.value.trim();
   if (soldierName === "") {
@@ -35,7 +35,7 @@ submitButton.addEventListener("click", () => {
   alert(`Soldier's name "${soldierName}" added.`);
 });
 
-// Initialize the map
+
 const map = L.map("map").setView([0, 0], 10);
 
 // Add OpenStreetMap tiles
